@@ -41,10 +41,13 @@ createApp({
 
   methods:{
     nextPrev(isNext){
-      if(isNext){
-        this.count++;
-      }else{
-        this.count--;
+      isNext ? this.count++ : this.count--;
+      console.log(this.count);
+      
+      if(this.count === this.games.lenght){
+        this.count = 0;
+      }else if(this.count < 0){
+        this.count = this.games.lenght - 1;
       }
     }
   }
