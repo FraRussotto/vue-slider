@@ -43,7 +43,8 @@ img{
 
 .thumb_wrapper img.active{
   border: 5px solid white;
-  opacity: 0.4;
+  opacity: 0.6;
+
 }
 
 .main_wrapper img.show{
