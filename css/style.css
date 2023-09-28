@@ -75,3 +75,24 @@ img{
 .btn_arrow:hover{
   cursor: pointer;
 }
+
+.reverse{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: -70px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  line-height: 40px;
+  border-radius: 50%;
+  border: 0;
+  background-color: rgba(211, 211, 211, 0.381);
+  color: darkcyan
+}
+
+.reverse:hover{
+  background-color: white;
+}

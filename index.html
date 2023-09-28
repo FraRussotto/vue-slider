@@ -39,6 +39,7 @@
           >
         </div>
 
+          <!-- Con @click creiamo l'eventListener nei bottoni -->
         <div class="buttons">
           <div @click="nextPrev(false)" class="btn_arrow up">
             <i class="fa-solid fa-chevron-up"></i>
@@ -46,7 +47,14 @@
           <div @click="nextPrev(true)" class="btn_arrow down">
             <i class="fa-solid fa-chevron-down"></i>
           </div>
-        </div>  
+
+          <!-- Inseriamo un bottone che inverta il senso dello slider automatico -->
+        </div>
+        <button class="reverse">
+          <i class="fa-solid fa-up-long"></i>
+          <i class="fa-solid fa-down-long"></i>
+        </button>
+
 
       </div>
 
