@@ -32,11 +32,19 @@ img{
   object-fit: cover;
 }
 
+.main_wrapper img{
+  display: none;
+}
+
 .thumb_wrapper img{
   height: calc(100% / 5);
 }
 
-img.active{
+.thumb_wrapper img.active{
   border: 5px solid white;
   opacity: 0.4;
+}
+
+.main_wrapper img.show{
+  display: block;
 }

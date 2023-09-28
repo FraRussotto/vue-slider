@@ -20,11 +20,12 @@
     <div class="container">
       <div class="slider d-flex">
         <div class="main_wrapper">
-          <img src="img/01.webp" alt="1">
-          <img src="img/02.webp" alt="2" class="d-none">
-          <img src="img/03.webp" alt="3" class="d-none">
-          <img src="img/04.webp" alt="4" class="d-none">
-          <img src="img/05.webp" alt="5" class="d-none">
+          <!-- Cicliamo in un solo tag img l'array Games con la direttiva di Vue -->
+          <img
+          v-for="(game, index) in games"
+          :class="{'show': index === count}"
+          :src="game.image">
+
         </div>
         <div class="thumb_wrapper">
           <img src="img/01.webp" alt="1" class="active">
