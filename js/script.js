@@ -33,8 +33,21 @@ createApp({
         }
       ],
 
-      count: 3
+      count: 0
+    }
+  },
+
+  // Aggiungiamo in methods una funzione che attraverso un flag, varia il valore di count che poi andremo a eguagliare ad index in modo da mostrare l'immagine.
+
+  methods:{
+    nextPrev(isNext){
+      if(isNext){
+        this.count++;
+      }else{
+        this.count--;
+      }
     }
   }
+
 
 }).mount('#app')
