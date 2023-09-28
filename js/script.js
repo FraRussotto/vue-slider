@@ -33,7 +33,9 @@ createApp({
         }
       ],
 
-      count: 0
+      count: 0,
+      direction: true,
+      clock: 0
     }
   },
 
@@ -42,15 +44,38 @@ createApp({
   methods:{
     nextPrev(isNext){
       isNext ? this.count++ : this.count--;
-      console.log(this.count);
       
-      if(this.count === this.games.lenght){
+      if(this.count === this.games.length){
         this.count = 0;
       }else if(this.count < 0){
-        this.count = this.games.lenght - 1;
+        this.count = this.games.length - 1;
       }
+      console.log(this.count);
     }
-  }
+  },
+    automaticSlide(){
+      this.clock = setInterval(() => {
+        this.direction ? this.count++ : this.count--;
+      
+        if(this.count === this.games.length){
+          this.count = 0;
+        }else if(this.count < 0){
+          this.count = this.games.length - 1;
+        }
+      }, 1500)
+    },
 
-
+// Attravero la funzione mounted che carica il suo contenuto al caricamento della pagina, inseriamo lo slider automatico.
+    mounted(){
+        this.clock = setInterval(() => {
+          this.direction ? this.count++ : this.count--;
+        
+          if(this.count === this.games.length){
+            this.count = 0;
+          }else if(this.count < 0){
+            this.count = this.games.length - 1;
+          }
+        }, 2000)
+    }
+  
 }).mount('#app')
